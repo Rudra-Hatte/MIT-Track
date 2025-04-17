@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Top Bar: White background, back arrow, small logo, and title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@android:color/white">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back arrow" />
+
+        <!-- Small Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/logo_1" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIT-TRACK"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <!-- Main Content Area: teal/purple background (#225C6E) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal"
+        android:background="#225C6E"
+        android:padding="16dp">
+
+        <!-- "Mark Attendance" title -->
+        <TextView
+            android:id="@+id/tvMarkAttendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark Attendance"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginTop="-11dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Black rectangle for the image (class photo) -->
+        <ImageView
+            android:id="@+id/imgClassPhoto"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            android:background="#000000"
+            android:contentDescription="Class photo placeholder" />
+
+        <!-- Subject label + Spinner in a horizontal layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvSubjectLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject :"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerSubject"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/gold" />
+        </LinearLayout>
+
+        <!-- Bottom portion with circle background + buttons -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Inverted circle background, “touching the ground” -->
+            <View
+                android:layout_width="500dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center"
+                android:translationY="110dp"
+                android:rotation="180"
+                android:background="@drawable/circle_background" />
+
+            <!-- Buttons Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:paddingHorizontal="16dp">
+
+                <!-- 1) OPEN CAMERA (black background, white text) -->
+                <Button
+                    android:id="@+id/btnOpenCamera"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="OPEN CAMERA"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_dashboard" />
+
+                <!-- 2) SELECT IMAGE (black background, white text) -->
+                <Button
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="SELECT IMAGE"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_dashboard"/>
+
+                <!-- 3) MARK ATTENDANCE (gold background, black text) -->
+                <Button
+                    android:id="@+id/btnMarkAttendance"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="MARK ATTENDANCE"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_gold" />
+
+                <!-- 4) VIEW ATTENDANCE REPORT (gold background, black text) -->
+                <Button
+                    android:id="@+id/btnViewAttendance"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:text="VIEW ATTENDANCE REPORT"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_gold" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

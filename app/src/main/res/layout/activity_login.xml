@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="#121212">
+
+    <!-- Top container: circle background + logo + title -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_marginTop="-270dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <!-- Circle shape behind the logo -->
+        <View
+            android:layout_width="450dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </FrameLayout>
+
+    <!-- Section Title over the logo -->
+    <TextView
+        android:id="@+id/tvSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up &amp; Login"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-90dp"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- Bottom container: CardView for the form -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="8"
+        android:layout_margin="0dp"
+        android:padding="16dp"
+        card_view:cardCornerRadius="36dp"
+        card_view:cardElevation="8dp"
+        card_view:cardBackgroundColor="#F4D126">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Roll Number -->
+            <EditText
+                android:id="@+id/roll_no"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/editview"
+                android:hint="Roll No"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#08677A"
+                android:textSize="20sp" />
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/editview"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#08677A"
+                android:textSize="20sp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/editview"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#08677A"
+                android:textSize="20sp" />
+
+            <!-- Buttons container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_dashboard"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="LOGIN"
+                    android:textColor="#F4D126"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_dashboard"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="REGISTER"
+                    android:textColor="#F4D126"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

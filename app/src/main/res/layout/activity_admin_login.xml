@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:weightSum="10"
+    android:background="#225C6E">
+
+    <!-- Top container: circle background + logo -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="4"
+        android:layout_marginTop="-60dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <!-- Circle shape behind the logo -->
+        <View
+            android:layout_width="450dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="-50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+        <!-- Logo on top of the circle -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="-10dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </FrameLayout>
+
+    <!-- Middle container: Title text -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Hello!! Login To Get Started"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Bottom container: The login form (EditTexts + Button) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Admin Username -->
+        <EditText
+            android:id="@+id/etAdminUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Admin Username"
+            android:inputType="text"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gold"
+            android:textSize="20sp"
+            android:background="@drawable/editview"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Admin Password -->
+        <EditText
+            android:id="@+id/etAdminPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Admin Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColorHint="@color/gold"
+            android:background="@drawable/editview"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- LOGIN Button -->
+        <Button
+            android:id="@+id/btnAdminLogin"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_dashboard"
+            android:padding="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

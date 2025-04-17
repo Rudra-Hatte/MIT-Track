@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-230dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <!-- Circle shape behind the logo -->
+        <View
+            android:layout_width="450dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/circle_background" />
+
+        <!-- Logo on top of the circle -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+    </FrameLayout>
+
+    <!-- Section Title -->
+    <TextView
+        android:id="@+id/tvSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Role"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvSectionTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Get Started"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal" />
+
+    <!-- Admin Button (Blue) -->
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="ADMIN"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_blue"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Student Button (Gold) -->
+    <Button
+        android:id="@+id/btnStudent"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="STUDENT"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@drawable/button_gold"
+        android:padding="16dp" />
+
+</LinearLayout>
